@@ -4,7 +4,7 @@ let letterPool = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d
 let wins = 0;
 let losses = 0;
 let guessesLeft = 10;
-let guessesMade = ""; 
+let lettersGuessed = [""]; 
 let userGuess = "";
 
 
@@ -15,9 +15,8 @@ console.log(secretLetter)
 
 
 function startOver(){
-    guessesLeft = 10;
-    randNum = Math.floor(Math.random() * letterPool.length);
-    let secretLetter = letterPool[randNum];
+        secretLetter = letterPool[randNum];
+        guessesLeft = 10;
    
 }
 
@@ -32,9 +31,11 @@ document.onkeyup = function(e) {
     let userGuess = e.key.toLowerCase();
 
     if(userGuess === secretLetter) {
-        wins++
-        alert("You Win!!!")
-        startOver()
+        wins++;
+        lettersGuessed = [];
+        alert("You Win!!!");
+        startOver();
+        
         
         
         
@@ -43,12 +44,18 @@ document.onkeyup = function(e) {
         if(userGuess !== secretLetter){
             document.getElementById("guesses-already").innerHTML = "Your Guesses so far " + userGuess;
             if(guessesLeft === 0){
-                losses++
+                losses++;
                 
-                alert("You Lose!!!")
-                startOver()
+                alert("You Lose!!!");
+                startOver();
             }
         }
+    }
+
+        if (lettersGuessed.indexOf(userGuess) !== secretLetter) {
+        lettersGuessed.push(userGuess);
+        document.getElementById("guesses-already").innerHtml = lettersGuessed;
+
     }
 
     document.getElementById("wins").innerHTML = "Wins " + wins;

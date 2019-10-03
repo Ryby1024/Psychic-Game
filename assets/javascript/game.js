@@ -15,9 +15,12 @@ console.log(secretLetter)
 
 
 function startOver(){
+        
+        randNum = Math.floor(Math.random() * letterPool.length);
         secretLetter = letterPool[randNum];
+        console.log(secretLetter)
+        lettersGuessed = [];
         guessesLeft = 10;
-   
 }
 
 //Starting the Game

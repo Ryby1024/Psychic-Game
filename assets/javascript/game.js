@@ -45,7 +45,7 @@ document.onkeyup = function(e) {
     } if(userGuess !== secretLetter) {
         guessesLeft--
         if(userGuess !== secretLetter){
-            document.getElementById("guesses-already").innerHTML = "Your Guesses so far " + userGuess;
+            document.getElementById("guesses-already").innerHTML = "Your Guesses so far: " + userGuess;
             if(guessesLeft === 0){
                 losses++;
                 
@@ -57,13 +57,13 @@ document.onkeyup = function(e) {
 
         if (lettersGuessed.indexOf(userGuess) !== secretLetter) {
         lettersGuessed.push(userGuess);
-        document.getElementById("guesses-already").innerHtml = lettersGuessed;
+        document.getElementById("guesses-already").innerHtml = "Your Guesses so far: " + lettersGuessed;
 
     }
 
-    document.getElementById("wins").innerHTML = "Wins " + wins;
-    document.getElementById("losses").innerHTML = "Losses " + losses;
-    document.getElementById("guesses-left").innerHTML = "Guesses Left " + guessesLeft;
+    document.getElementById("wins").innerHTML = "Wins: " + wins;
+    document.getElementById("losses").innerHTML = "Losses: " + losses;
+    document.getElementById("guesses-left").innerHTML = "Guesses Left: " + guessesLeft;
 
 
 }

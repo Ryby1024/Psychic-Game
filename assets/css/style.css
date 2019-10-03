@@ -1,0 +1,49 @@
+body{
+    background: #1a1a1d;
+    color: white;
+    font-size: 20px;
+}
+h1  {
+    color: black;
+    height: 150px;
+    font-size: 45px;
+    padding: 20px;
+    text-align: center;
+}
+header  {
+    background: #c3073f;
+    margin: auto;
+    border: 3px solid white;
+}
+img{
+    width: 40%;
+    margin-left: 30%;
+}
+
+.box    {
+    background: #4e4e50;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    
+}
+#guess-letter   {
+    border: 1px solid white;
+    height: 100px;
+}
+#wins   {
+    border: 1px solid white;
+    height: 50px;
+}
+#losses {
+    border: 1px solid white;
+    height: 50px;
+}
+#guesses-left   {
+    border: 1px solid white;
+    height: 100px;
+}
+#guesses-already    {
+    border: 1px solid white;
+    height: 100px;
+}

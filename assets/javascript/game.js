@@ -38,8 +38,9 @@ document.onkeyup = function(e) {
     console.log(userGuess)
     if(userGuess === secretLetter) {
         wins++;
-        lettersGuessed = [];
+        
         alert("You Win!!!");
+        lettersGuessed = [];
         startOver();
         
         
@@ -52,6 +53,7 @@ document.onkeyup = function(e) {
                 losses++;
                 
                 alert("You Lose!!!");
+                lettersGuessed = [];
                 startOver();
             }
         

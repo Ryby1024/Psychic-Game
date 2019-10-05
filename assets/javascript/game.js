@@ -52,7 +52,7 @@ document.onkeyup = function(e) {
             if(guessesLeft === 0){
                 losses++;
                 
-                alert("You Lose!!!");
+                alert("You Lose!!! The letter was " + secretLetter);
                 lettersGuessed = [];
                 startOver();
             }
@@ -61,9 +61,9 @@ document.onkeyup = function(e) {
 
         
 
-    document.getElementById("wins").innerHTML = "Wins: " + wins;
-    document.getElementById("losses").innerHTML = "Losses: " + losses;
-    document.getElementById("guesses-left").innerHTML = "Guesses Left: " + guessesLeft;
+    document.getElementById("wins").textContent = "Wins: " + wins;
+    document.getElementById("losses").textContent = "Losses: " + losses;
+    document.getElementById("guesses-left").textContent = "Guesses Left: " + guessesLeft;
 
 
 }
